@@ -250,11 +250,20 @@
       gap: 1rem;
     }
 
-    footer p {
+    footer p, footer a {
       font-size: 0.55rem;
       letter-spacing: 0.12em;
       text-transform: uppercase;
       color: var(--ink-ghost);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    footer a:hover { color: var(--ink-muted); }
+
+    .footer-links {
+      display: flex;
+      gap: 1.5rem;
     }
 
     /* ── Mobile ── */
@@ -270,6 +279,8 @@
     <div class="header-inner">
       <a href="/" class="logo" aria-label="Início">CA</a>
       <nav aria-label="Navegação principal">
+        <a href="/">Home</a>
+        <a href="/cases">Cases</a>
         <a href="#contato">Contato</a>
       </nav>
       <button class="theme-toggle" id="theme-toggle" aria-label="Alternar tema">light</button>
@@ -305,8 +316,11 @@
 
   <footer>
     <div class="footer-inner">
-      <p>Camila Accoroni</p>
-      <p>© 2026</p>
+      <p>© 2026 Camila Accoroni</p>
+      <nav class="footer-links" aria-label="Links">
+        <a href="https://linkedin.com/in/camilaccoroni" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="mailto:camilaccoroni@gmail.com">Email</a>
+      </nav>
     </div>
   </footer>
 
